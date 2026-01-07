@@ -1,0 +1,147 @@
+.auth-page {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: var(--off-white);
+}
+
+.auth-container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.auth-card {
+  flex: 1;
+  padding: 48px;
+}
+
+.auth-card-wide {
+  flex: 1.5;
+}
+
+.auth-header {
+  margin-bottom: 32px;
+}
+
+.auth-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.auth-header p {
+  color: var(--gray);
+}
+
+.auth-form {
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.terms-checkbox input {
+  margin-top: 3px;
+}
+
+.terms-checkbox a {
+  color: var(--primary-navy);
+  text-decoration: underline;
+}
+
+.auth-footer {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--light-gray);
+}
+
+.auth-footer a {
+  color: var(--primary-navy);
+  font-weight: 600;
+}
+
+.auth-side {
+  flex: 0.8;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--dark-navy) 100%);
+  padding: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.auth-side-content {
+  color: var(--white);
+}
+
+.auth-side-content h2 {
+  font-size: 28px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.auth-side-content p {
+  opacity: 0.9;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.auth-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-feature svg {
+  width: 20px;
+  height: 20px;
+  color: var(--primary-gold);
+}
+
+.auth-feature span {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-side {
+    display: none;
+  }
+
+  .auth-card {
+    padding: 32px 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

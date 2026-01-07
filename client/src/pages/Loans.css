@@ -1,0 +1,292 @@
+.loans-page {
+  background: var(--off-white);
+}
+
+.loans-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+}
+
+.loans-hero {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--dark-navy) 100%);
+  padding: 80px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.loans-hero h1 {
+  font-size: 48px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.loans-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.loans-content {
+  padding: 80px 0;
+}
+
+.loans-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.loans-intro h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.loans-intro p {
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.loans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.loan-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.loan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.loan-image {
+  position: relative;
+  height: 180px;
+}
+
+.loan-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.loan-apr-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--primary-gold);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.loan-content {
+  padding: 24px;
+}
+
+.loan-content h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.loan-description {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.loan-details {
+  display: flex;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
+  margin-bottom: 16px;
+}
+
+.loan-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: var(--gray);
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: var(--primary-navy);
+  font-size: 14px;
+}
+
+.loan-link {
+  color: var(--primary-gold);
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.loan-card:hover .loan-link {
+  color: var(--primary-navy);
+}
+
+.loan-calculator-section {
+  text-align: center;
+  padding: 60px 0;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  margin-top: 40px;
+}
+
+.loan-calculator-section h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.loan-calculator-section > p {
+  color: var(--gray);
+  margin-bottom: 40px;
+}
+
+.calculator-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.calculator-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.input-group {
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 12px;
+}
+
+.range-input {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.range-input input[type="range"] {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--light-gray);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.range-input input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-navy);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.range-value {
+  min-width: 100px;
+  text-align: right;
+  font-weight: 600;
+  color: var(--primary-navy);
+  font-size: 18px;
+}
+
+.calculator-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 32px;
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+}
+
+.result-item {
+  text-align: center;
+}
+
+.result-item.primary {
+  background: var(--primary-navy);
+  color: var(--white);
+  padding: 24px;
+  border-radius: var(--radius);
+  margin: -32px 0;
+}
+
+.result-item.primary .result-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.result-item.primary .result-value {
+  color: var(--white);
+  font-size: 28px;
+}
+
+.result-label {
+  display: block;
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.result-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+@media (max-width: 1024px) {
+  .loans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .loans-hero h1 {
+    font-size: 32px;
+  }
+
+  .loans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-results {
+    grid-template-columns: 1fr;
+  }
+
+  .result-item.primary {
+    margin: 0;
+  }
+}

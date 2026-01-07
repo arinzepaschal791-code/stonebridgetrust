@@ -1,0 +1,250 @@
+.housing-page {
+  background: var(--off-white);
+}
+
+.housing-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+}
+
+.housing-hero {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--dark-navy) 100%);
+  background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 100px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.housing-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 54, 93, 0.85);
+}
+
+.housing-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.housing-hero h1 {
+  font-size: 48px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.housing-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.housing-content {
+  padding: 60px 0;
+}
+
+.housing-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border: 2px solid var(--light-gray);
+  border-radius: 30px;
+  background: var(--white);
+  color: var(--dark-gray);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-navy);
+  color: var(--primary-navy);
+}
+
+.filter-btn.active {
+  background: var(--primary-navy);
+  border-color: var(--primary-navy);
+  color: var(--white);
+}
+
+.housing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.housing-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.housing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.housing-image {
+  position: relative;
+  height: 220px;
+}
+
+.housing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.housing-type {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.housing-rate {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--primary-gold);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.housing-content {
+  padding: 24px;
+}
+
+.housing-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 8px;
+}
+
+.housing-content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.housing-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gray);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.housing-specs {
+  display: flex;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--light-gray);
+}
+
+.housing-specs span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.housing-specs svg {
+  color: var(--primary-navy);
+}
+
+.mortgage-info {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 60px;
+  text-align: center;
+}
+
+.mortgage-info h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.mortgage-info > p {
+  color: var(--gray);
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.mortgage-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: left;
+}
+
+.mortgage-feature {
+  display: flex;
+  gap: 16px;
+}
+
+.mortgage-feature svg {
+  width: 32px;
+  height: 32px;
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.mortgage-feature h4 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.mortgage-feature p {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+@media (max-width: 1024px) {
+  .housing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .housing-hero h1 {
+    font-size: 32px;
+  }
+
+  .housing-grid, .mortgage-features {
+    grid-template-columns: 1fr;
+  }
+
+  .mortgage-info {
+    padding: 40px 24px;
+  }
+}

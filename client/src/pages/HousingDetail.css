@@ -1,0 +1,299 @@
+.housing-detail-loading, .housing-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+}
+
+.housing-gallery {
+  height: 500px;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.housing-detail-content {
+  padding: 60px 0;
+}
+
+.housing-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+}
+
+.housing-header {
+  margin-bottom: 32px;
+}
+
+.property-type {
+  display: inline-block;
+  background: var(--primary-gold);
+  color: var(--white);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.housing-header h1 {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.housing-header h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--dark-gray);
+  margin-bottom: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray);
+  font-size: 16px;
+}
+
+.property-specs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 32px;
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+  margin-bottom: 40px;
+}
+
+.spec {
+  text-align: center;
+}
+
+.spec-value {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.spec-label {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.property-section {
+  margin-bottom: 40px;
+}
+
+.property-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--primary-gold);
+}
+
+.property-section p {
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+.property-features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.property-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--dark-gray);
+}
+
+.property-features svg {
+  width: 20px;
+  height: 20px;
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.housing-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mortgage-calculator-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 100px;
+}
+
+.mortgage-calculator-card h3 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.calc-input {
+  margin-bottom: 24px;
+}
+
+.calc-input label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--dark-gray);
+}
+
+.calc-input input[type="range"] {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--light-gray);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.calc-input input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary-navy);
+  cursor: pointer;
+}
+
+.calc-value {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-navy);
+  margin-top: 12px;
+}
+
+.calc-results {
+  background: var(--off-white);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.calc-result {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.calc-result:last-child {
+  border-bottom: none;
+}
+
+.calc-result span {
+  color: var(--gray);
+}
+
+.calc-result strong {
+  color: var(--primary-navy);
+}
+
+.calc-result.primary {
+  background: var(--primary-navy);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: -20px -20px 12px;
+}
+
+.calc-result.primary span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.calc-result.primary strong {
+  color: var(--white);
+  font-size: 24px;
+}
+
+.calculator-note {
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 16px;
+  text-align: center;
+}
+
+.contact-card {
+  background: var(--primary-navy);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+}
+
+.contact-card h4 {
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.contact-card p {
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.contact-phone {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-gold) !important;
+}
+
+.modal-subtitle {
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1024px) {
+  .housing-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mortgage-calculator-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .housing-gallery {
+    height: 300px;
+  }
+
+  .housing-header h1 {
+    font-size: 32px;
+  }
+
+  .property-specs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .property-features {
+    grid-template-columns: 1fr;
+  }
+}
