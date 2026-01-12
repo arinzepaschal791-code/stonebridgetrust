@@ -52,7 +52,14 @@ npm run db:seed      # Seed sample data
 4. **Housing/Mortgage** - Property listings with mortgage calculators
 5. **Responsive Design** - Mobile-friendly interface
 
+## Deployment
+- Build command: `npm run build`
+- Start command: `npm run start`
+- The build compiles both client (Vite) and server (esbuild)
+- Production server runs on port 5000 and serves static files from dist/public
+
 ## Recent Changes
+- January 12, 2026: Fixed deployment configuration with proper build and start scripts
 - January 7, 2026: Fixed features array parsing in loan and housing detail pages
 - January 7, 2026: Moved vite.config.ts to client folder for proper proxy support
 - January 7, 2026: Initial project setup with complete banking functionality
