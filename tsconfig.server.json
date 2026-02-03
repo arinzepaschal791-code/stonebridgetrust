@@ -8,7 +8,7 @@
     "noEmit": false,
     "strict": false,
     "allowImportingTsExtensions": false,
-    "types": []
+    "types": ["node"]
   },
   "include": ["server/**/*"],
   "exclude": ["node_modules", "client"]
