@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './VerifyEmail.css';
 
-function VerifyEmail() {
+const VerifyEmail: React.FC = () => {
   const [searchParams] = useSearchParams();
   const { refreshUser } = useAuth();
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
@@ -44,15 +45,15 @@ function VerifyEmail() {
     <div className="verify-email-page">
       <div className="verify-card">
         {status === 'loading' && (
-          <>
+          <React.Fragment>
             <div className="spinner"></div>
             <h1>Verifying your email...</h1>
             <p>Please wait while we confirm your email address.</p>
-          </>
+          </React.Fragment>
         )}
 
         {status === 'success' && (
-          <>
+          <React.Fragment>
             <div className="success-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
@@ -64,11 +65,11 @@ function VerifyEmail() {
             <Link to="/dashboard" className="btn btn-primary">
               Go to Dashboard
             </Link>
-          </>
+          </React.Fragment>
         )}
 
         {status === 'error' && (
-          <>
+          <React.Fragment>
             <div className="error-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="10" />
@@ -81,11 +82,11 @@ function VerifyEmail() {
             <Link to="/login" className="btn btn-primary">
               Back to Login
             </Link>
-          </>
+          </React.Fragment>
         )}
       </div>
     </div>
   );
-}
+};
 
 export default VerifyEmail;
