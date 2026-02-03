@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: stonebridge-trust
+    env: node
+    buildCommand: |
+      npm install
+      cd client && npm install
+      npm run build
+      cd ..
+      npm run build:server
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: stonebridge-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: RESEND_API_KEY
+        sync: false
+    healthCheckPath: /api/health
+    autoDeploy: true
+
+databases:
+  - name: stonebridge-db
+    databaseName: stonebridge
+    user: stonebridge_user
+    plan: free
