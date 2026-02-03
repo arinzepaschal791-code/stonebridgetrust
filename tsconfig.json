@@ -4,7 +4,6 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -16,6 +15,6 @@
     "esModuleInterop": true,
     "baseUrl": "."
   },
-  "include": ["server/**/*", "shared/**/*"],
-  "exclude": ["node_modules", "client"]
+  "include": ["shared/**/*"],
+  "exclude": ["node_modules", "client", "server"]
 }
