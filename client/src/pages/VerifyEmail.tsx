@@ -27,7 +27,9 @@ function VerifyEmail() {
       if (res.ok) {
         setStatus('success');
         setMessage(data.message);
-        refreshUser();
+        if (refreshUser) {
+          refreshUser();
+        }
       } else {
         setStatus('error');
         setMessage(data.error);
