@@ -18,8 +18,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@assets/*": ["../../attached_assets/*"]
+      "@/*": ["./src/*"]
     },
     "baseUrl": "."
   },
