@@ -22,43 +22,17 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Check if client build exists
+// Serve static files from client/dist
 const clientDistPath = path.join(__dirname, '../client/dist');
-const clientIndexPath = path.join(clientDistPath, 'index.html');
+app.use(express.static(clientDistPath));
 
-// Serve static files from client/dist if it exists
-if (fs.existsSync(clientDistPath)) {
-  console.log(`📁 Serving React app from: ${clientDistPath}`);
-  app.use(express.static(clientDistPath));
-  
-  // Handle all other routes by serving React app
-  app.get('*', (req, res) => {
-    if (fs.existsSync(clientIndexPath)) {
-      res.sendFile(clientIndexPath);
-    } else {
-      res.json({ 
-        message: 'React app not built yet. Run: cd client && npm run build',
-        api: 'API is working at /api/health'
-      });
-    }
-  });
-} else {
-  console.log('⚠️  Client dist folder not found. Serving API only.');
-  
-  // If no React app, show API info
-  app.get('*', (req, res) => {
-    res.json({
-      message: 'Stonebridge Trust API',
-      note: 'React app not built. Build with: cd client && npm install && npm run build',
-      api_endpoints: ['GET /api/health']
-    });
-  });
-}
+// Handle ALL routes by serving index.html (React Router needs this)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(clientDistPath, 'index.html'));
+});
 
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
-  console.log(`🌐 API: http://localhost:${PORT}/api/health`);
-  if (fs.existsSync(clientDistPath)) {
-    console.log(`📱 React app: http://localhost:${PORT}/`);
-  }
+  console.log(`🌐 Website: https://stonebridgetrust.onrender.com`);
+  console.log(`📊 API: https://stonebridgetrust.onrender.com/api/health`);
 });
